@@ -4,8 +4,8 @@ const apiKey = (import.meta.env.GEMINI_API_KEY)
 const apiBaseUrl = (import.meta.env.API_BASE_URL)?.trim().replace(/\/$/, '')
 
 const genAI = apiBaseUrl
-  ? new GoogleGenerativeAI(apiKey, apiBaseUrl, { version: 'v2' }) // 更新 API 版本为 v2
-  : new GoogleGenerativeAI(apiKey, { version: 'v2' }) // 更新 API 版本为 v2
+  ? new GoogleGenerativeAI(apiKey, apiBaseUrl, { version: 'v1beta' }) // 更新 API 版本为 v2
+  : new GoogleGenerativeAI(apiKey, { version: 'v1beta' }) // 更新 API 版本为 v2
 
   // ? new GoogleGenerativeAI(apiKey, apiBaseUrl)
   // : new GoogleGenerativeAI(apiKey)
